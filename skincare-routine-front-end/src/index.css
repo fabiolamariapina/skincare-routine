@@ -12,6 +12,13 @@ h1 {
   font-weight: 800;
 }
 
+#log-in-button {
+  width: 75px;
+  height: 25px;
+  position: relative;
+  top: 30px;
+}
+
 /* styling for main component */
 main {
   background-color: #ccdbdc;

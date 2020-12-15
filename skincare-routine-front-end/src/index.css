@@ -19,11 +19,6 @@ main {
 }
 
 /* styling for footer component */
-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
 .trademark,
 .credit {
   font-style: italic;

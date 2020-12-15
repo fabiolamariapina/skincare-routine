@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "primeflex/primeflex.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 

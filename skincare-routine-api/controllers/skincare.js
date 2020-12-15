@@ -22,6 +22,18 @@ skincare.post("/", async (req, res) => {
   });
 });
 // update
-
+skincare.put("/:id", (req, res) => {
+  Skincare.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedSkincare) => {
+      if (err) {
+        res.status(400).json({ error: err.message });
+      }
+      res.status(200).json(updatedSkincare);
+    }
+  );
+});
 
 module.exports = skincare;

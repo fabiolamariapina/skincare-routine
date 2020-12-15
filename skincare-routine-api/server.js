@@ -17,6 +17,9 @@ mongoose.connection.once("open", () => {
   console.log("connected to mongoose...");
 });
 
+// middleware
+app.use(express.json());
+
 // controllers
 const skincareControllers = require("./controllers/skincare.js");
 app.use("/skincare", skincareControllers);

@@ -7,7 +7,14 @@ body {
 }
 
 /* styling for header component */
-
 h1 {
   font-weight: 800;
 }
+
+/* styling for main component */
+main {
+  background-color: #ccdbdc;
+  color: #003249;
+}
+
+/* styling for footer component */

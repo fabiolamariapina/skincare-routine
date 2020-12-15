@@ -21,5 +21,7 @@ skincare.post("/", async (req, res) => {
     res.status(200).send(createdSkincare);
   });
 });
+// update
+
 
 module.exports = skincare;

@@ -24,7 +24,7 @@ app.use(express.json());
 
 // controllers
 const skincareControllers = require("./controllers/skincare.js");
-app.use("/skincare", skincareControllers);
+app.use("/your-skincare-routine", skincareControllers);
 
 // listener
 app.listen(PORT, () => {

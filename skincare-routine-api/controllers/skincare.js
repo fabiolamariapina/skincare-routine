@@ -5,7 +5,12 @@ const Skincare = require("../models/skincare.js");
 // Routes
 // index
 skincare.get("/", (req, res) => {
-  res.send("testing");
+  Skincare.find({}, (err, foundSkincare) => {
+    if (err) {
+      res.status(400).json({ error: foundSkincare });
+    }
+    res.status(200).json(foundSkincare);
+  });
 });
 // create
 skincare.post("/", async (req, res) => {

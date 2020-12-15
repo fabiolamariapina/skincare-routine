@@ -35,5 +35,14 @@ skincare.put("/:id", (req, res) => {
     }
   );
 });
+// delete
+skincare.delete("/:id", (req, res) => {
+  Skincare.findByIdAndRemove(req.params.id, (err, deletedSkincare) => {
+    if (err) {
+      res.status(400).json({ error: err.message });
+    }
+    res.status(200).json(deletedSkincare);
+  });
+});
 
 module.exports = skincare;

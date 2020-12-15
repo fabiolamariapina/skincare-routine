@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "./components/Header";
 
 export default class App extends Component {
   constructor(props) {
@@ -8,12 +9,6 @@ export default class App extends Component {
     };
   }
   render() {
-    return (
-      <div className="header">
-        <header>
-          <h1 className="app-name">Skincare Routine</h1>
-        </header>
-      </div>
-    );
+    return <Header />;
   }
 }

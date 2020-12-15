@@ -12,6 +12,8 @@ mongoose.connection.on("disconnected", () => console.log("mongo disconnected"));
 // mongoose connection
 mongoose.connect("mongodb://localhost:27017/holidays", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
 });
 mongoose.connection.once("open", () => {
   console.log("connected to mongoose...");

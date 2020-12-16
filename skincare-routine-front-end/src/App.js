@@ -13,6 +13,9 @@ export default class App extends Component {
     };
     this.getSkincare = this.getSkincare.bind(this);
   }
+  compoundDidMount() {
+    this.getSkincare();
+  }
   getSkincare() {
     fetch(baseURL + "/your-skincare-routine")
       .then((data) => {

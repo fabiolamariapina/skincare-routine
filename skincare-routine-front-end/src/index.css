@@ -17,6 +17,15 @@ h1 {
   height: 25px;
   position: relative;
   top: 30px;
+  background-color: #007ea7;
+  border: 1px solid #007ea7;
+  color: #ccdbdc;
+}
+
+#log-in-button:hover {
+  background-color: #ccdbdc;
+  border: 1px solid #ccdbdc;
+  color: #007ea7;
 }
 
 /* styling for main component */

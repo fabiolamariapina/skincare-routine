@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "primeflex/primeflex.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -29,13 +30,13 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <Router>
         <Header />
         <main>
-          <h3>Testing</h3>
+          <h3>Your Skincare Routine</h3>
         </main>
-        <Footer />
-      </div>
+        <Footer /> 
+      </Router>
     );
   }
 }

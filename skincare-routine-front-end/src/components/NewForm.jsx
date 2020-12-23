@@ -2,6 +2,16 @@ import React, { Component } from "react";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 
+const selectProductType = [
+  { label: "Cleanser", value: "CL" },
+  { label: "Toner", value: "TO" },
+  { label: "Essence", value: "ES" },
+  { label: "Serum", value: "SE" },
+  { label: "Moisturizer", value: "MO" },
+  { label: "Sunscreen", value: "SU" },
+  { label: "Other", value: "OT" },
+];
+
 export default class NewForm extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +27,15 @@ export default class NewForm extends Component {
     return (
       <div className="container" id="add-form">
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="Product Type">Product Type</label>
+          <Dropdown
+            value={this.state.productType}
+            options={selectProductType}
+            onChange={(e) => {
+              this.setState({ productType: e.value });
+            }}
+            placeholder="What step of your routine is this product?"
+          />
+          {/* <label htmlFor="Product Type">Product Type</label>
           <input
             type="text"
             id="product-type"
@@ -25,7 +43,7 @@ export default class NewForm extends Component {
             onChange={this.handleChange}
             value={this.state.productType}
             placeholder="In what step of your routine does the product go?"
-          />
+          /> */}
           <label htmlFor="Product Name">Product Name</label>
           <input
             type="text"

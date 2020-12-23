@@ -5,13 +5,14 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #80ced7;
-  color: #ccdbdc;
+  color: #ffffff;
 }
 
 .page-header {
   text-align: center;
   font-size: 26px;
 }
+
 /* styling for header component */
 h1 {
   font-weight: 800;
@@ -35,7 +36,7 @@ h1 {
 
 /* styling for main component */
 main {
-  background-color: #ccdbdc;
+  background-color: #ffffff;
   color: #003249;
 }
 
@@ -46,7 +47,7 @@ main {
 }
 
 .linkedIn-link {
-  color: #ccdbdc;
+  color: #ffffff;
   text-decoration: none;
 }
 

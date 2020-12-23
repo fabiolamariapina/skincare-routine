@@ -17,7 +17,7 @@ h1 {
   font-weight: 800;
 }
 
-#log-in-button {
+/* #log-in-button {
   width: 75px;
   height: 25px;
   position: relative;
@@ -31,7 +31,7 @@ h1 {
   background-color: #ccdbdc;
   border: 1px solid #ccdbdc;
   color: #007ea7;
-}
+} */
 
 /* styling for main component */
 main {

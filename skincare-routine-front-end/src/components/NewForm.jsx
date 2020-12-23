@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 
+// productType in this.state
 const selectProductType = [
   { label: "Cleanser", value: "CL" },
   { label: "Toner", value: "TO" },
@@ -10,6 +11,13 @@ const selectProductType = [
   { label: "Moisturizer", value: "MO" },
   { label: "Sunscreen", value: "SU" },
   { label: "Other", value: "OT" },
+];
+
+//timeOfDay in this.state
+const selectTimeOfDay = [
+  { label: "Morning", value: "MR" },
+  { label: "Evening", value: "EV" },
+  { label: "Both", value: "BT" },
 ];
 
 export default class NewForm extends Component {
@@ -54,13 +62,12 @@ export default class NewForm extends Component {
             placeholder="An image is worth a thousand words."
           />
           <label htmlFor="Product Type">Time of Day</label>
-          <input
-            type="text"
-            id="time-of-day"
-            name="timeOfDay"
-            onChange={this.handleChange}
+          <Dropdown
             value={this.state.timeOfDay}
-            placeholder="Is this product used in your morning or evening skincare routine?"
+            options={selectTimeOfDay}
+            onChange={(e) => {
+              this.setState({ timeOfDay: e.value });
+            }}
           />
           <label htmlFor="Skin Concerns">Skincare Concerns</label>
           <input

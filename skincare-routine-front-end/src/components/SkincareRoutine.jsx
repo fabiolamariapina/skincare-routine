@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "primeflex/primeflex.css";
 
 export default class SkincareRoutine extends Component {
   render() {

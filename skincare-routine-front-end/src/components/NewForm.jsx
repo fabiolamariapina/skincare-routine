@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 
-// productType in this.state
+// productType for dropdown in this.state
 const selectProductType = [
   { label: "Cleanser", value: "CL" },
   { label: "Toner", value: "TO" },
@@ -13,7 +13,7 @@ const selectProductType = [
   { label: "Other", value: "OT" },
 ];
 
-//timeOfDay in this.state
+//timeOfDay for dropdown in this.state
 const selectTimeOfDay = [
   { label: "Morning", value: "MR" },
   { label: "Evening", value: "EV" },
@@ -33,7 +33,7 @@ export default class NewForm extends Component {
   }
   render() {
     return (
-      <div className="container" id="add-form">
+      <div className="container" id="new-form">
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="Product Type">Product Type</label>
           <Dropdown

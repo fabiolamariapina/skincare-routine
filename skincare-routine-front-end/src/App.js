@@ -3,6 +3,7 @@ import "primeflex/primeflex.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import SkincareRoutine from "./components/SkincareRoutine";
 
 const baseURL = "http://localhost:3003";
 
@@ -33,9 +34,15 @@ export default class App extends Component {
       <Router>
         <Header />
         <main>
-          <h3>Your Skincare Routine</h3>
+          <Switch>
+            <Route
+              path="/your-skincare-routine"
+              exact
+              component={SkincareRoutine}
+            />
+          </Switch>
         </main>
-        <Footer /> 
+        <Footer />
       </Router>
     );
   }

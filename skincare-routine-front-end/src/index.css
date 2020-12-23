@@ -53,4 +53,5 @@ main {
 
 .linkedIn-link:hover {
   color: #003249;
+  transition: all 0.5s;
 }

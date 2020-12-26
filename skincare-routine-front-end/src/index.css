@@ -50,7 +50,8 @@ img {
   max-width: 95%;
 }
 
-.log-in-create-account {
+.log-in-create-account,
+.log-in-form {
   display: flex;
   flex-direction: column;
 }

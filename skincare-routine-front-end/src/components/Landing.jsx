@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Button } from "primereact/button";
 import LogIn from "./LogIn";
 
 export default class Landing extends Component {
@@ -21,14 +20,7 @@ export default class Landing extends Component {
             </h3>
           </div>
           <div className="log-in-create-account">
-            <div className="log-in-form">
-              <LogIn />
-              <Button
-                label="LOG IN"
-                className="p-button-raised p-button-rounded"
-                id="log-in-button"
-              />
-            </div>
+            <LogIn />
             <a className="new-user" href="/users/new">
               NEW USER? CLICK HERE TO CREATE AN ACCOUNT FOR FREE!
             </a>

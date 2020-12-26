@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "primeflex/primeflex.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";

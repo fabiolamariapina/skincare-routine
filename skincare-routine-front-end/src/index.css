@@ -5,37 +5,23 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #80ced7;
-  color: #ccdbdc;
+  color: #ffffff;
 }
 
+/* the heading of each page outside of landing */
 .page-header {
   text-align: center;
   font-size: 26px;
 }
+
 /* styling for header component */
 h1 {
   font-weight: 800;
 }
 
-/* #log-in-button {
-  width: 75px;
-  height: 25px;
-  position: relative;
-  top: 30px;
-  background-color: #007ea7;
-  border: 1px solid #007ea7;
-  color: #ccdbdc;
-}
-
-#log-in-button:hover {
-  background-color: #ccdbdc;
-  border: 1px solid #ccdbdc;
-  color: #007ea7;
-} */
-
 /* styling for main component */
 main {
-  background-color: #ccdbdc;
+  background-color: #ffffff;
   color: #003249;
 }
 
@@ -46,10 +32,17 @@ main {
 }
 
 .linkedIn-link {
-  color: #ccdbdc;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .linkedIn-link:hover {
   color: #003249;
+  transition: all 0.5s;
+}
+
+/* NEW FORM STYLING */
+#new-form {
+  display: flex;
+  flex-direction: column;
 }

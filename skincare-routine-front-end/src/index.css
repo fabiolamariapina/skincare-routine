@@ -41,6 +41,17 @@ main {
   transition: all 0.5s;
 }
 
+/* LANDING STYLING */
+.new-user {
+  color: #003249;
+  text-decoration: none;
+}
+
+.new-user:hover {
+  color: #80ced7;
+  transition: all 0.5s;
+}
+
 /* NEW FORM STYLING */
 #new-form {
   display: flex;

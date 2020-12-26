@@ -21,6 +21,7 @@ export default class Landing extends Component {
             </a>
           </div>
         </div>
+        <div class="slideshow-container" id="landing-images"></div>
       </div>
     );
   }

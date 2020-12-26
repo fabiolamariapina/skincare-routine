@@ -23,6 +23,7 @@ export default class Landing extends Component {
             <Button
               label="LOG IN"
               className="p-button-raised p-button-rounded"
+              id="log-in-button"
             />
             <a className="new-user" href="/users/new">
               NEW USER? CLICK HERE TO CREATE AN ACCOUNT FOR FREE!

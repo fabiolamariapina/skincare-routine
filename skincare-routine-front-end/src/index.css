@@ -50,6 +50,20 @@ img {
   max-width: 95%;
 }
 
+#log-in-button {
+  background-color: #80ced7;
+  border: 1px solid #80ced7;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+#log-in-button:hover {
+  background-color: #ffffff;
+  color: #80ced7;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
 .new-user {
   color: #003249;
   text-decoration: none;

@@ -1,24 +1,6 @@
 import React, { Component } from "react";
-import { Dropdown } from "primereact/dropdown";
+import Form from "react-bootstrap/Form";
 import { Button } from "primereact/button";
-
-// productType for dropdown in this.state
-const selectProductType = [
-  { label: "Cleanser", value: "CL" },
-  { label: "Toner", value: "TO" },
-  { label: "Essence", value: "ES" },
-  { label: "Serum", value: "SE" },
-  { label: "Moisturizer", value: "MO" },
-  { label: "Sunscreen", value: "SU" },
-  { label: "Other", value: "OT" },
-];
-
-//timeOfDay for dropdown in this.state
-const selectTimeOfDay = [
-  { label: "Morning", value: "MR" },
-  { label: "Evening", value: "EV" },
-  { label: "Both", value: "BT" },
-];
 
 export default class NewForm extends Component {
   constructor(props) {
@@ -34,55 +16,64 @@ export default class NewForm extends Component {
   render() {
     return (
       <div className="container" id="new-form">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="Product Type">Product Type</label>
-          <Dropdown
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group
+            controlId="exampleForm.ControlSelect1"
             value={this.state.productType}
-            options={selectProductType}
-            onChange={(e) => {
-              this.setState({ productType: e.value });
-            }}
-          />
-          <label htmlFor="Product Name">Product Name</label>
-          <input
-            type="text"
-            id="product-name"
-            name="productName"
-            onChange={this.handleChange}
+          >
+            <Form.Label>Product Type</Form.Label>
+            <Form.Control as="select">
+              <option>Cleanser</option>
+              <option>Toner</option>
+              <option>Essence</option>
+              <option>Moisturizer</option>
+              <option>Sunscreen</option>
+              <option>Other</option>
+            </Form.Control>
+          </Form.Group>
+          <br />
+          <Form.Group
+            controlId="exampleForm.ControlInput1"
             value={this.state.productName}
-            placeholder="What is the name of the product?"
-          />
-          <label htmlFor="Image">Image</label>
-          <input
-            type="text"
-            id="image"
-            name="image"
-            onChange={this.handleChange}
-            value={this.state.image}
-            placeholder="An image is worth a thousand words."
-          />
-          <label htmlFor="Product Type">Time of Day</label>
-          <Dropdown
+          >
+            <Form.Label>Product Name</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+          <br />
+          <Form.Group
+            controlId="exampleForm.ControlInput1"
+            value={this.state.productName}
+          >
+            <Form.Label>Product Image</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+          <br />
+          <Form.Group
+            controlId="exampleForm.ControlSelect1"
             value={this.state.timeOfDay}
-            options={selectTimeOfDay}
-            onChange={(e) => {
-              this.setState({ timeOfDay: e.value });
-            }}
-          />
-          <label htmlFor="Skin Concerns">Skincare Concerns</label>
-          <input
-            type="text"
-            id="skincare-concerns"
-            name="skincareConcerns"
-            onChange={this.handleChange}
+          >
+            <Form.Label>Time of Day</Form.Label>
+            <Form.Control as="select">
+              <option>Morning</option>
+              <option>Evening</option>
+              <option>Both</option>
+            </Form.Control>
+          </Form.Group>
+          <br />
+          <Form.Group
+            controlId="exampleForm.ControlInput1"
             value={this.state.skinConcerns}
-            placeholder="What is this product used for?"
-          />
+          >
+            <Form.Label>Skin Concerns</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+          <br />
           <Button
             label="Add To Your Routine"
             className="p-button-raised p-button-rounded"
+            id="add-button"
           />
-        </form>
+        </Form>
       </div>
     );
   }

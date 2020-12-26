@@ -5,21 +5,11 @@ export default class Landing extends Component {
   render() {
     return (
       <div className="landing-main">
-        <div className="slideshow-container">
+        <div className="landing-first-half">
           <img
-            className="slideshow-image-3"
+            className="landing-image"
             src="images/top-shelf-3.jpg"
-            alt="Slide 3"
-          />
-          <img
-            className="slideshow-image-2"
-            src="images/top-shelf-2.jpg"
-            alt="Slide 2"
-          />
-          <img
-            className="slideshow-image-1"
-            src="images/top-shelf-1.jpg"
-            alt="Slide 1"
+            alt="Slide 0"
           />
         </div>
 

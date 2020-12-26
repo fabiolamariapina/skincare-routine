@@ -46,6 +46,10 @@ main {
   display: flex;
 }
 
+img {
+  max-width: 95%;
+}
+
 .new-user {
   color: #003249;
   text-decoration: none;

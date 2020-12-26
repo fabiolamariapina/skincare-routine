@@ -50,11 +50,19 @@ img {
   max-width: 95%;
 }
 
+.log-in-create-account {
+  display: flex;
+  flex-direction: column;
+}
+
 #log-in-button {
+  font-family: "Montserrat", sans-serif;
   background-color: #80ced7;
   border: 1px solid #80ced7;
   color: #ffffff;
   border-radius: 5px;
+  width: 100px;
+  height: 25px;
 }
 
 #log-in-button:hover {

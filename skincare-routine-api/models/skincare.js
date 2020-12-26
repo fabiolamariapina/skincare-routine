@@ -6,7 +6,6 @@ const skincareSchema = mongoose.Schema({
   image: String,
   timeOfDay: String,
   skinConcerns: [{ type: String }],
-  buyMore: Boolean,
 });
 
 module.exports = mongoose.model("Skincare", skincareSchema);

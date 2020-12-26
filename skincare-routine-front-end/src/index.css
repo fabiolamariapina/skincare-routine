@@ -42,6 +42,10 @@ main {
 }
 
 /* LANDING STYLING */
+.landing-main {
+  display: flex;
+}
+
 .new-user {
   color: #003249;
   text-decoration: none;

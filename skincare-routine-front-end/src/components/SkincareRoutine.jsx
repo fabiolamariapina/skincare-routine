@@ -30,6 +30,15 @@ export default class SkincareRoutine extends Component {
         <h3 className="page-header" id="your-skincare-routine-header">
           Your Skincare Routine
         </h3>
+        <div className="your-routine">
+          {this.state.skincare.map((skincare) => {
+            return (
+              <h5 className="product-name" key={skincare._id}>
+                {skincare.productName}
+              </h5>
+            );
+          })}
+        </div>
       </div>
     );
   }

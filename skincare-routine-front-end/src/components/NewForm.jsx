@@ -15,6 +15,9 @@ export default class NewForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
+  handleChange(event) {
+    this.setState({ [event.currentTarget.id]: event.currentTarget.value });
+  }
   render() {
     return (
       <div className="container" id="new-form">

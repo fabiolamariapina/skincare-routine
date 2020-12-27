@@ -18,13 +18,8 @@ export default class NewForm extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange = (event) => {
-    this.setState({
-      productType: event.currentTarget.productType,
-      productName: event.currentTarget.value,
-      image: event.currentTarget.value,
-      timeOfDay: event.currentTarget.value,
-      skinConcerns: event.currentTarget.value,
-    });
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   };
   handleSubmit(event) {
     event.preventDefault();
@@ -64,7 +59,7 @@ export default class NewForm extends Component {
               as="select"
               type="text"
               id="product-type"
-              name="Product Type"
+              name="productType"
               onChange={this.handleChange}
               value={this.state.productType}
             >
@@ -82,7 +77,7 @@ export default class NewForm extends Component {
             <Form.Control
               type="text"
               id="product-name"
-              name="Product Name"
+              name="productName"
               onChange={this.handleChange}
               value={this.state.productName}
             />
@@ -93,9 +88,9 @@ export default class NewForm extends Component {
             <Form.Control
               type="text"
               id="image"
-              name="Image"
+              name="image"
               onChange={this.handleChange}
-              value={this.state.productName}
+              value={this.state.image}
             />
           </Form.Group>
           <br />
@@ -104,7 +99,7 @@ export default class NewForm extends Component {
             <Form.Control
               as="select"
               id="time-of-day"
-              name="Time Of Day"
+              name="timeOfDay"
               onChange={this.handleChange}
               value={this.state.timeOfDay}
             >
@@ -119,7 +114,7 @@ export default class NewForm extends Component {
             <Form.Control
               type="text"
               id="skin-concerns"
-              name="skin-concerns"
+              name="skinConcerns"
               onChange={this.handleChange}
               value={this.state.skinConcerns}
             />

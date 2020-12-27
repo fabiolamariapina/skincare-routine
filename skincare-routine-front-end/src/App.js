@@ -6,30 +6,7 @@ import SkincareRoutine from "./components/SkincareRoutine";
 import Add from "./components/Add";
 import Landing from "./components/Landing";
 
-const baseURL = "http://localhost:3003";
-
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      skincare: [],
-    };
-    this.getSkincare = this.getSkincare.bind(this);
-  }
-  compoundDidMount() {
-    this.getSkincare();
-  }
-  getSkincare() {
-    fetch(baseURL + "/your-skincare-routine")
-      .then((data) => {
-        return data.json();
-      })
-      .then((parsedData) => {
-        this.setState({
-          skincare: parsedData,
-        });
-      });
-  }
   render() {
     return (
       <Router>

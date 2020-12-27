@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "primereact/button";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const baseURL = "http://localhost:3003";
 
@@ -43,14 +43,13 @@ export default class SkincareRoutine extends Component {
           })}
         </div>
         <div className="container-for-add-button">
-          {/* <Link to="/add-to-your-routine"> */}
-          <Button
-            type="submit"
-            label="Add To Your Routine"
-            className="p-button-raised p-button-rounded"
-            id="add-button"
-          />
-          {/* </Link> */}
+          <Link to="/add-to-your-routine">
+            <Button
+              label="Add To Your Routine"
+              className="p-button-raised p-button-rounded"
+              id="add-button"
+            />
+          </Link>
         </div>
       </div>
     );

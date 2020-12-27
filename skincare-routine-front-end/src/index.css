@@ -26,6 +26,11 @@ main {
 }
 
 /* styling for footer component */
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .trademark,
 .credit {
   font-style: italic;
@@ -86,8 +91,18 @@ img {
 /* NEW FORM STYLING */
 #new-form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   padding-bottom: 25px;
+}
+
+.label {
+  position: relative;
+  right: 5px;
+}
+
+.container-for-add-button {
+  display: flex;
+  justify-content: center;
 }
 
 #add-button {

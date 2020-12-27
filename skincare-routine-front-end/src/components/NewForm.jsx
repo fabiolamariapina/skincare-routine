@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
-import { Button } from "primereact/button";
+import Button from "react-bootstrap/Button";
 
 const baseURL = "http://localhost:3003";
 
@@ -14,8 +14,8 @@ export default class NewForm extends Component {
       timeOfDay: "",
       skinConcerns: "",
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -121,12 +121,9 @@ export default class NewForm extends Component {
           </Form.Group>
           <br />
           <div className="container-for-add-button">
-            <Button
-              type="submit"
-              label="Add To Your Routine"
-              className="p-button-raised p-button-rounded"
-              id="add-button"
-            />
+            <Button variant="primary" type="submit" id="add-button">
+              Add To Your Routine
+            </Button>
           </div>
           <br />
         </Form>

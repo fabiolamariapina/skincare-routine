@@ -17,9 +17,15 @@ export default class NewForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  handleChange(event) {
-    this.setState({ [event.currentTarget.id]: event.currentTarget.value });
-  }
+  handleChange = (event) => {
+    this.setState({
+      productType: event.currentTarget.productType,
+      productName: event.currentTarget.value,
+      image: event.currentTarget.value,
+      timeOfDay: event.currentTarget.value,
+      skinConcerns: event.currentTarget.value,
+    });
+  };
   handleSubmit(event) {
     event.preventDefault();
     fetch(baseURL + "/your-skincare-routine", {
@@ -37,7 +43,7 @@ export default class NewForm extends Component {
     })
       .then((res) => res.json())
       .then((resJson) => {
-        this.props.handleSkincare(resJson);
+        this.props.handleAddSkincare(resJson);
         this.setState({
           productType: "",
           productName: "",
@@ -56,6 +62,7 @@ export default class NewForm extends Component {
             <Form.Label className="label">Product Type</Form.Label>
             <Form.Control
               as="select"
+              type="text"
               id="product-type"
               name="Product Type"
               onChange={this.handleChange}

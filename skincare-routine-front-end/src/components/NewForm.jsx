@@ -12,6 +12,8 @@ export default class NewForm extends Component {
       timeOfDay: "",
       skinConcerns: "",
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
   render() {
     return (

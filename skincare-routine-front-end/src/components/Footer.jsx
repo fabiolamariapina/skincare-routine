@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="p-d-flex p-jc-between" id="footer">
+      <footer id="footer">
         <p className="trademark">2020 © All Right Reserved</p>
         <p className="credit">
           Coded by{" "}

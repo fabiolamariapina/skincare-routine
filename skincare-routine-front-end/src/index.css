@@ -26,6 +26,11 @@ main {
 }
 
 /* styling for footer component */
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .trademark,
 .credit {
   font-style: italic;
@@ -86,5 +91,31 @@ img {
 /* NEW FORM STYLING */
 #new-form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.label {
+  position: relative;
+  right: 5px;
+}
+
+.container-for-add-button {
+  display: flex;
+  justify-content: center;
+}
+
+#add-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #80ced7;
+  border: 1px solid #80ced7;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+#add-button:hover {
+  background-color: #ffffff;
+  color: #80ced7;
+  cursor: pointer;
+  transition: all 0.5s;
 }

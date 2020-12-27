@@ -21,34 +21,39 @@ export default class NewForm extends Component {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
-  handleSubmit(event) {
-    event.preventDefault();
-    fetch(baseURL + "/your-skincare-routine", {
-      method: "POST",
-      body: JSON.stringify(
-        { productType: this.state.productType },
-        { productName: this.state.productName },
-        { image: this.state.image },
-        { timeOfDay: this.state.timeOfDay },
-        { skinConcerns: this.state.skinConcerns }
-      ),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((resJson) => {
-        this.props.handleAddSkincare(resJson);
-        this.setState({
-          productType: "",
-          productName: "",
-          image: "",
-          timeOfDay: "",
-          skinConcerns: "",
-        });
-      })
-      .catch((error) => console.error({ Error: error }));
-  }
+  // handleSubmit(event) {
+  //   event.preventDefault();
+  //   fetch(baseURL + "/your-skincare-routine", {
+  //     method: "POST",
+  //     body: JSON.stringify(
+  //       { productType: this.state.productType },
+  //       { productName: this.state.productName },
+  //       { image: this.state.image },
+  //       { timeOfDay: this.state.timeOfDay },
+  //       { skinConcerns: this.state.skinConcerns }
+  //     ),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((resJson) => {
+  //       this.props.handleAddSkincare(resJson);
+  //       this.setState({
+  //         productType: "",
+  //         productName: "",
+  //         image: "",
+  //         timeOfDay: "",
+  //         skinConcerns: "",
+  //       });
+  //     })
+  //     .catch((error) => console.error({ Error: error }));
+  // }
+  handleSubmit = (event) => {
+    alert(
+      `${this.state.productType} ${this.state.productName} ${this.state.timeOfDay}`
+    );
+  };
   render() {
     return (
       <div className="container" id="new-form">

@@ -73,6 +73,7 @@ export default class NewForm extends Component {
             className="p-button-raised p-button-rounded"
             id="add-button"
           />
+          <br />
         </Form>
       </div>
     );

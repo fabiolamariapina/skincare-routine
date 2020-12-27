@@ -86,7 +86,7 @@ img {
 /* NEW FORM STYLING */
 #new-form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   padding-bottom: 25px;
 }
 

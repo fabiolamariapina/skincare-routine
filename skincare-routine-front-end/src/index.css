@@ -99,7 +99,7 @@ img {
   position: relative;
   right: 5px;
 }
-
+/* the #add-button styling also applies to index page */
 .container-for-add-button {
   display: flex;
   justify-content: center;

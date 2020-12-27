@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import { Button } from "primereact/button";
 
+const baseURL = "http://localhost:3003";
+
 export default class NewForm extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +19,34 @@ export default class NewForm extends Component {
   }
   handleChange(event) {
     this.setState({ [event.currentTarget.id]: event.currentTarget.value });
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    fetch(baseURL + "/your-skincare-routine", {
+      method: "POST",
+      body: JSON.stringify(
+        { productType: this.state.productType },
+        { productName: this.state.productName },
+        { image: this.state.image },
+        { timeOfDay: this.state.timeOfDay },
+        { skinConcerns: this.state.skinConcerns }
+      ),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((resJson) => {
+        this.props.handleSkincare(resJson);
+        this.setState({
+          productType: "",
+          productName: "",
+          image: "",
+          timeOfDay: "",
+          skinConcerns: "",
+        });
+      })
+      .catch((error) => console.error({ Error: error }));
   }
   render() {
     return (

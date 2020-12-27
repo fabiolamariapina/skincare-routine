@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import SkincareRoutine from "./components/SkincareRoutine";
 import Add from "./components/Add";
+import Landing from "./components/Landing";
 
 const baseURL = "http://localhost:3003";
 
@@ -35,6 +36,7 @@ export default class App extends Component {
         <Header />
         <main>
           <Switch>
+            <Route path="/" exact component={Landing} />
             <Route
               path="/your-skincare-routine"
               exact

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import SkincareRoutine from "./components/SkincareRoutine";
 import Add from "./components/Add";
 import Landing from "./components/Landing";
+import NewAccount from "./components/NewAccount";
 
 export default class App extends Component {
   render() {
@@ -20,6 +21,7 @@ export default class App extends Component {
               component={SkincareRoutine}
             />
             <Route path="/add-to-your-routine" exact component={Add} />
+            <Route path="/create-account" exact component={NewAccount} />
           </Switch>
         </main>
         <Footer />

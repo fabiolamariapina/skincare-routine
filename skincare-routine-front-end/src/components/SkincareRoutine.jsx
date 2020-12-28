@@ -61,16 +61,18 @@ export default class SkincareRoutine extends Component {
               <img key={skincare._id} alt="product">
                 {skincare.image}
               </img>
-              {/* <Button
-                label="EDIT PRODUCT"
-                className="p-button-raised p-button-rounded"
-                id="edit-button"
-              />
-              <Button
-                label="DELETE PRODUCT"
-                className="p-button-raised p-button-rounded"
-                id="delete-button"
-              /> */}
+              {/* <div className="edit-and-delete-buttons">
+                <Button
+                  label="EDIT PRODUCT"
+                  className="p-button-raised p-button-rounded"
+                  id="edit-button"
+                />
+                <Button
+                  label="DELETE PRODUCT"
+                  className="p-button-raised p-button-rounded"
+                  id="delete-button"
+                />
+              </div> */}
             </div>
           );
         })}

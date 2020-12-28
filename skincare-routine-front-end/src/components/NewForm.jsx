@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
-import { Button } from "primereact/button";
+import Button from "react-bootstrap/Button";
+// import { useHistory } from "react-router-dom";
 
 const baseURL = "http://localhost:3003";
 
@@ -14,13 +15,17 @@ export default class NewForm extends Component {
       timeOfDay: "",
       skinConcerns: "",
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event) {
-    this.setState({ [event.currentTarget.id]: event.currentTarget.value });
-  }
-  handleSubmit(event) {
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+  handleSubmit = (event) => {
+    alert(
+      `${this.state.productType} ${this.state.productName} ${this.state.image} ${this.state.timeOfDay} ${this.state.skinConcerns}`
+    );
     event.preventDefault();
     fetch(baseURL + "/your-skincare-routine", {
       method: "POST",
@@ -37,7 +42,7 @@ export default class NewForm extends Component {
     })
       .then((res) => res.json())
       .then((resJson) => {
-        this.props.handleSkincare(resJson);
+        this.props.handleAddSkincare(resJson);
         this.setState({
           productType: "",
           productName: "",
@@ -47,7 +52,8 @@ export default class NewForm extends Component {
         });
       })
       .catch((error) => console.error({ Error: error }));
-  }
+    this.props.history.push("/your-skincare-routine");
+  };
   render() {
     return (
       <div className="container" id="new-form">
@@ -56,8 +62,9 @@ export default class NewForm extends Component {
             <Form.Label className="label">Product Type</Form.Label>
             <Form.Control
               as="select"
+              type="text"
               id="product-type"
-              name="Product Type"
+              name="productType"
               onChange={this.handleChange}
               value={this.state.productType}
             >
@@ -75,7 +82,7 @@ export default class NewForm extends Component {
             <Form.Control
               type="text"
               id="product-name"
-              name="Product Name"
+              name="productName"
               onChange={this.handleChange}
               value={this.state.productName}
             />
@@ -86,9 +93,9 @@ export default class NewForm extends Component {
             <Form.Control
               type="text"
               id="image"
-              name="Image"
+              name="image"
               onChange={this.handleChange}
-              value={this.state.productName}
+              value={this.state.image}
             />
           </Form.Group>
           <br />
@@ -97,7 +104,7 @@ export default class NewForm extends Component {
             <Form.Control
               as="select"
               id="time-of-day"
-              name="Time Of Day"
+              name="timeOfDay"
               onChange={this.handleChange}
               value={this.state.timeOfDay}
             >
@@ -112,19 +119,16 @@ export default class NewForm extends Component {
             <Form.Control
               type="text"
               id="skin-concerns"
-              name="skin-concerns"
+              name="skinConcerns"
               onChange={this.handleChange}
               value={this.state.skinConcerns}
             />
           </Form.Group>
           <br />
           <div className="container-for-add-button">
-            <Button
-              type="submit"
-              label="Add To Your Routine"
-              className="p-button-raised p-button-rounded"
-              id="add-button"
-            />
+            <Button variant="primary" type="submit" id="add-button">
+              Add To Your Routine
+            </Button>
           </div>
           <br />
         </Form>

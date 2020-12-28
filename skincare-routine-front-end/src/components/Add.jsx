@@ -13,7 +13,7 @@ export default class Add extends Component {
     const copySkincare = [...this.state.skincare];
     copySkincare.unshift(skincare);
     this.setState({
-      skinare: copySkincare,
+      skincare: copySkincare,
       productType: "",
       productName: "",
       image: "",

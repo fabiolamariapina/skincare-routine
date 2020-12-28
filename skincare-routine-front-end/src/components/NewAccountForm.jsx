@@ -23,12 +23,14 @@ export default class NewAccountForm extends Component {
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           <br />
-          <Button
-            label="CREATE ACCOUNT"
-            className="p-button-raised p-button-rounded"
-            id="log-in-button"
-            type="submit"
-          />
+          <div className="container-for-create-account-button">
+            <Button
+              label="CREATE ACCOUNT"
+              className="p-button-raised p-button-rounded"
+              id="create-account-button"
+              type="submit"
+            />
+          </div>
         </Form>
       </div>
     );

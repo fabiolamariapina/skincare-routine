@@ -55,12 +55,15 @@ export default class SkincareRoutine extends Component {
           return (
             <div className="your-routine">
               <h3 key={skincare._id}> {skincare.productName} </h3>
+              <br />
               <img key={skincare._id} alt="product">
                 {skincare.image}
               </img>
             </div>
           );
         })}
+        <Button label="EDIT PRODUCT" />
+        <Button label="DELETE PRODUCT" />
         <div className="container-for-add-button">
           <Link to="/add-to-your-routine">
             <Button

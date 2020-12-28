@@ -23,7 +23,9 @@ export default class SkincareRoutine extends Component {
     });
   }
   getSkincare() {
-    fetch(baseURL + "/your-skincare-routine")
+    fetch(baseURL + "/your-skincare-routine", {
+      method: "GET",
+    })
       .then((data) => {
         return data.json();
       })

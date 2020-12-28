@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LogIn from "./LogIn";
+import { Link } from "react-router-dom";
 
 export default class Landing extends Component {
   render() {
@@ -21,9 +22,9 @@ export default class Landing extends Component {
           </div>
           <div className="log-in-create-account">
             <LogIn />
-            <a className="new-user" href="/users/new">
+            <Link to="/users-new" className="new-user" href="/users/new">
               NEW USER? CLICK HERE TO CREATE AN ACCOUNT FOR FREE!
-            </a>
+            </Link>
           </div>
         </div>
       </div>

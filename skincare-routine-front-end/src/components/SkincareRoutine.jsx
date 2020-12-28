@@ -23,7 +23,9 @@ export default class SkincareRoutine extends Component {
     });
   }
   getSkincare() {
-    fetch(baseURL + "/your-skincare-routine")
+    fetch(baseURL + "/your-skincare-routine", {
+      method: "GET",
+    })
       .then((data) => {
         return data.json();
       })
@@ -51,16 +53,39 @@ export default class SkincareRoutine extends Component {
         <h3 className="page-header" id="your-skincare-routine-header">
           Your Skincare Routine
         </h3>
-        <div className="your-routine">
-          {this.state.skincare.map((skincare) => {
-            return (
-              <h5 className="product-name" key={skincare._id}>
-                {skincare.productName}
-              </h5>
-              // <img className='product-image' src={} />
-            );
-          })}
-        </div>
+        {this.state.skincare.map((skincare) => {
+          return (
+            <div className="your-routine">
+              <h3 key={skincare._id}> {skincare.productName} </h3>
+              <br />
+              <img key={skincare._id} alt="product">
+                {skincare.image}
+              </img>
+              {/* <div className="edit-and-delete-buttons">
+                <Button
+                  label="EDIT PRODUCT"
+                  className="p-button-raised p-button-rounded"
+                  id="edit-button"
+                />
+                <Button
+                  label="DELETE PRODUCT"
+                  className="p-button-raised p-button-rounded"
+                  id="delete-button"
+                />
+              </div> */}
+            </div>
+          );
+        })}
+        <Button
+          label="EDIT PRODUCT"
+          className="p-button-raised p-button-rounded"
+          id="edit-button"
+        />
+        <Button
+          label="DELETE PRODUCT"
+          className="p-button-raised p-button-rounded"
+          id="delete-button"
+        />
         <div className="container-for-add-button">
           <Link to="/add-to-your-routine">
             <Button

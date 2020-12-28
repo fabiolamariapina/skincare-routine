@@ -124,6 +124,24 @@ img {
   transition: all 0.5s;
 }
 
+/* INDEX STYLING */
+#edit-button,
+#delete-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #80ced7;
+  border: 1px solid #80ced7;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+#edit-button:hover,
+#delete-button:hover {
+  background-color: #ffffff;
+  color: #80ced7;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
 /* NEW USER PAGE STYLING */
 .new-user-account-form {
   display: flex;

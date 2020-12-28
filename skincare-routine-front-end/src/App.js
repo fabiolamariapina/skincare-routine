@@ -21,7 +21,7 @@ export default class App extends Component {
               component={SkincareRoutine}
             />
             <Route path="/add-to-your-routine" exact component={Add} />
-            <Route path="/create-account" exact component={NewAccount} />
+            <Route path="/users-new" exact component={NewAccount} />
           </Switch>
         </main>
         <Footer />

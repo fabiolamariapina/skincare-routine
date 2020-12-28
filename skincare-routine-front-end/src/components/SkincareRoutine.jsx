@@ -55,7 +55,9 @@ export default class SkincareRoutine extends Component {
           return (
             <div className="your-routine">
               <h3 key={skincare._id}> {skincare.productName} </h3>
-              <img key={skincare._id}>{skincare.image}</img>
+              <img key={skincare._id} alt="product">
+                {skincare.image}
+              </img>
             </div>
           );
         })}

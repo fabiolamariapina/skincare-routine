@@ -62,8 +62,16 @@ export default class SkincareRoutine extends Component {
             </div>
           );
         })}
-        <Button label="EDIT PRODUCT" />
-        <Button label="DELETE PRODUCT" />
+        <Button
+          label="EDIT PRODUCT"
+          className="p-button-raised p-button-rounded"
+          id="edit-button"
+        />
+        <Button
+          label="DELETE PRODUCT"
+          className="p-button-raised p-button-rounded"
+          id="delete-button"
+        />
         <div className="container-for-add-button">
           <Link to="/add-to-your-routine">
             <Button

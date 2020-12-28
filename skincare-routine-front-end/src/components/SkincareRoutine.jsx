@@ -11,9 +11,16 @@ export default class SkincareRoutine extends Component {
       skincare: [],
     };
     this.getSkincare = this.getSkincare.bind(this);
+    this.handleAddSkincare = this.handleAddSkincare.bind(this);
+    this.deleteSkincare = this.deleteSkincare.bind(this);
   }
   compoundDidMount() {
     this.getSkincare();
+  }
+  handleAddSkincare(skincare) {
+    this.setState({
+      skincare: this.state.skincare.concat(skincare),
+    });
   }
   getSkincare() {
     fetch(baseURL + "/your-skincare-routine")
@@ -25,6 +32,18 @@ export default class SkincareRoutine extends Component {
           skincare: parsedData,
         });
       });
+  }
+  deleteSkincare(id) {
+    fetch(baseURL + "/your-skincare-routine" + id, {
+      method: "DELETE",
+    }).then((response) => {
+      const findIndex = this.state.skincare.findIndex(
+        (skincare) => skincare._id === id
+      );
+      const copySkincare = [...this.state.skincare];
+      copySkincare.splice(findIndex, 1);
+      this.setState({ skincare: copySkincare });
+    });
   }
   render() {
     return (

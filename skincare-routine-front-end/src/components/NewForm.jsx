@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+// import { useHistory } from "react-router-dom";
 
 const baseURL = "http://localhost:3003";
 
@@ -51,6 +52,7 @@ export default class NewForm extends Component {
         });
       })
       .catch((error) => console.error({ Error: error }));
+    this.props.history.push("/your-skincare-routine");
   };
   render() {
     return (
